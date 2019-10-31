@@ -4,14 +4,14 @@ n=125;% n=0.25/0.002
 v=randn(1,20);k=1;s=[0 0 0];
 for p=1:length(v)
     if v(1,p)<0
-        v(1,p)=-1; % pe nivelurile date
+        v(1,p)=-1; % nivelurile date
     else v(1,p)=1;    
     end
 end
 
 for i=1:20
     
-    for j=1:125
+    for j=1:n
         s(1,k) = v(1,i); %generarea semnalului s;
         k=k+1;
     end
@@ -30,7 +30,7 @@ for p=1:length(v)
     if v(1,p)>-0.5 && v(1,p)<0
         v(1,p)=-1;  
     end
-    if v(1,p)>0.5
+    if v(1,p)>0.5  % nivelurile date
         v(1,p)=3;
     end
     if v(1,p)>0 && v(1,p)<0.5
@@ -40,7 +40,7 @@ for p=1:length(v)
 end   
 for i=1:20
     
-    for j=1:125
+    for j=1:n
         s(1,k) = v(1,i);
         k=k+1;
     end
@@ -63,7 +63,7 @@ for p=1:length(v)
     if v(1,p)>-0.33 && v(1,p)<0
         v(1,p)=-5;
     end
-    if v(1,p)>0.66
+    if v(1,p)>0.66  % nivelurile date
         v(1,p)=5;
     end
     if v(1,p)>0.33 && v(1,p)<0.66
@@ -75,7 +75,7 @@ for p=1:length(v)
 end   
 for i=1:20
     
-    for j=1:125
+    for j=1:n
         s(1,k) = v(1,i);
         k=k+1;
     end
@@ -117,7 +117,7 @@ for p=1:length(v)
 end   
 for i=1:20
     
-    for j=1:125
+    for j=1:n
         s(1,k) = v(1,i);
         k=k+1;
     end
